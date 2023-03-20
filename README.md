@@ -32,15 +32,15 @@ Images original — A visual representation for each audio file. One way to clas
 
 2 CSV files — Containing features of the audio files. One file has for each song (30 seconds long) a mean and variance computed over multiple features that can be extracted from an audio file. The other file has the same structure, but the songs are split before into 3 seconds audio files.
 
-# Audio Libraries Used
+## Audio Libraries Used
 
-# 1. LIBROSA
+### 1. LIBROSA
 Librosa is a python package for music and audio analysis. It provides the building blocks necessary to create music information retrieval systems. By using Librosa, we can extract certain key features from the audio samples such as Tempo, Chroma Energy Normalized, Mel-Freqency Cepstral Coefficients, Spectral Centroid, Spectral Contrast, Spectral Rolloff, and Zero Crossing Rate.
 
-# 2. Python.display.Audio 
+### 2. Python.display.Audio 
 With the help of IPython.display.Audio we can play audio in the notebook.
 
-# Visualizing Audio Files
+### Visualizing Audio Files
 Visualizing Audio Files: 
 * Plot Raw Wave Files
 * Spectrograms
