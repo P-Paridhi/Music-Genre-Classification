@@ -43,7 +43,33 @@ With the help of IPython.display.Audio we can play audio in the notebook.
 ### Visualizing Audio Files
 Visualizing Audio Files: 
 * Plot Raw Wave Files
-* Spectrograms
-* Spectral Rolloff
-* Chroma Feature
-* Zero Crossing Rate
+* Spectrograms: representing the signal loudness of a signal over time at various frequencies present in a particular waveform.
+* Zero Crossing Rate: the rate at which a signal changes from positive to zero to negative or from negative to zero to positive.
+
+### Feature Extraction 
+- We cannot have any text in our data to convert categorical text data into model-understandable numerical data, we use LabelEncoder. 
+
+### Feature Scaling 
+- Standardize the data using StandardScaler()
+
+### Dividing Data Into Training and Testing Sets
+- 70% training, 30% testing 
+
+### Building a Model 
+- There are many ways through which we can train our model. Some of these approaches are:
+  - Multiclass Support Vector Machines
+  - K-Means Clustering
+  - K-Nearest Neighbors
+  - Convolutional Neural Networks
+  ## The chart shows why we are using CNN to train our model: 
+  ![image](https://user-images.githubusercontent.com/109361931/229408289-430c83fe-0996-4287-8f50-bb0de5a95bf9.png)
+
+- Optimizer used: Adam 
+- loss: sparse_categorical_crossentropy() function
+- No. of epoch: 600
+- All of the hidden layers are using the RELU activation function and the output layer uses the softmax function.
+- Dropout is used to prevent overfitting.
+
+Evaluation 
+- Test loss: 2.155240774154663
+- Test Accuracy: 77.87878513336182
