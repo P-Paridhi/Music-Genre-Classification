@@ -40,6 +40,8 @@ Librosa is a python package for music and audio analysis. It provides the buildi
 ### 2. Python.display.Audio 
 With the help of IPython.display.Audio we can play audio in the notebook.
 
+## Building Model 
+
 ### Visualizing Audio Files
 Visualizing Audio Files: 
 * Plot Raw Wave Files
