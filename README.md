@@ -34,28 +34,16 @@ Images original — A visual representation for each audio file. One way to clas
 
 ## Audio Libraries Used
 
-### 1. LIBROSA
+### LIBROSA
 Librosa is a python package for music and audio analysis. It provides the building blocks necessary to create music information retrieval systems. By using Librosa, we can extract certain key features from the audio samples such as Tempo, Chroma Energy Normalized, Mel-Freqency Cepstral Coefficients, Spectral Centroid, Spectral Contrast, Spectral Rolloff, and Zero Crossing Rate.
 
-### 2. Python.display.Audio 
-With the help of IPython.display.Audio we can play audio in the notebook.
-
-## Building Model 
-
-### Visualizing Audio Files
-Visualizing Audio Files: 
-* Plot Raw Wave Files
-* Spectrograms: representing the signal loudness of a signal over time at various frequencies present in a particular waveform.
-* Zero Crossing Rate: the rate at which a signal changes from positive to zero to negative or from negative to zero to positive.
 
 ### Feature Extraction 
-- We cannot have any text in our data to convert categorical text data into model-understandable numerical data, we use LabelEncoder. 
-
-### Feature Scaling 
-- Standardize the data using StandardScaler()
+- Load the data and extract the MFCC features
+- if mfcc shape is less than input shape then padding is performed on mfcc with '0'.
 
 ### Dividing Data Into Training and Testing Sets
-- 70% training, 30% testing 
+- 80% training, 20% testing 
 
 ### Building a Model 
 - There are many ways through which we can train our model. Some of these approaches are:
@@ -67,10 +55,11 @@ Visualizing Audio Files:
   ![image](https://user-images.githubusercontent.com/109361931/229408289-430c83fe-0996-4287-8f50-bb0de5a95bf9.png)
 
 - Optimizer used: Adam 
-- loss: sparse_categorical_crossentropy() function
-- No. of epoch: 600
+- learning rate: 0.001 
+- loss: categorical_crossentropy 
+- No. of epoch: 50
 - All of the hidden layers are using the RELU activation function and the output layer uses the softmax function.
-- Dropout is used to prevent overfitting.
+- Dropout is used to prevent overfitting.      
 
 Evaluation 
 - Test loss: 2.155240774154663
