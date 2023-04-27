@@ -57,10 +57,10 @@ Librosa is a python package for music and audio analysis. It provides the buildi
 - Optimizer used: Adam 
 - learning rate: 0.001 
 - loss: categorical_crossentropy 
-- No. of epoch: 50
+- No. of epoch: 100
 - All of the hidden layers are using the RELU activation function and the output layer uses the softmax function.
 - Dropout is used to prevent overfitting.      
 
 Evaluation 
-- Test loss: 2.155240774154663
-- Test Accuracy: 77.87878513336182
+- Test loss: 0.28
+- Test Accuracy: 90%
